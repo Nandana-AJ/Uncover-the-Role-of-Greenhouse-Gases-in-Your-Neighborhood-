@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHG Emissions Mapping Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Uncover Greenhouse Gas Emissions in Your Neighborhood</h1>
+        <p>Visualize, analyze, and propose solutions to reduce emissions.</p>
+        <button onclick="startMapping()">Start Mapping</button>
+    </header>
+
+    <section id="map-section">
+        <h2>Interactive Map</h2>
+        <div id="map"></div>
+    </section>
+
+    <section id="upload-section">
+        <h2>Upload Local GHG Data</h2>
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="file" name="dataset" accept=".csv" required>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <section id="visualization-section">
+        <h2>Data Visualization</h2>
+        <canvas id="emission-chart"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GHG Challenge. Created for Environmental Impact.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
